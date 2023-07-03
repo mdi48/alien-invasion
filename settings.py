@@ -8,6 +8,7 @@ class Settings:
         # Ship settings.
         # Moves position by 1.5 pixels.
         self.ship_speed = 1.5 
+        self.ship_limit = 3
         
         # Bullet settings.
         self.bullet_speed = 1.5
