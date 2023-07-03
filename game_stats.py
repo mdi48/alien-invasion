@@ -1,4 +1,6 @@
-class GameStats:
+import pygame
+
+class GameStats():
     """Track statistics for Alien Invasion."""
     
     def _init_(self, ai_game):

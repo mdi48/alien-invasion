@@ -22,8 +22,7 @@ class AlienInvasion:
         self.screen = pygame.display.set_mode(
             (self.settings.screen_width, self.settings.screen_height))
         
-        # Create an instance to store game statistics.
-        self.stats = GameStats()
+        
                 
         # Because we don't know your monitor resolution ahead of time, we update these settings after
         # the screen has been created, using width and height attributes of the screen's rect to 
@@ -34,6 +33,9 @@ class AlienInvasion:
         
         # Sets the window caption.
         pygame.display.set_caption("Alien Invasion")
+        
+        # Create an instance to store game statistics.
+        self.stats = GameStats(self)
         
         # Initializes an instance of a ship.
         self.ship = Ship(self)
@@ -51,7 +53,7 @@ class AlienInvasion:
         while True:
             self._check_events()
             
-            if self.stats.game_active:
+            if self.stats.game_active == True:
                 self.ship.update()
                 self._update_bullets()
                 self._update_aliens()
